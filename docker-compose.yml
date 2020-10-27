@@ -3,6 +3,12 @@ volumes:
   php-fpm-socket:
   db-store:
 services:
+  composer:
+    image: composer
+    command: "composer install"
+    volumes:
+      - ./backend:/app
+
   app:
     build: ./infra/docker/php
     volumes:
