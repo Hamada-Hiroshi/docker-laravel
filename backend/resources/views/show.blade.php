@@ -12,7 +12,7 @@
     width='100%'
     height='320'
     frameborder='0'>
-  </iflame>
+  </iframe>
 
   <div>
     <a href={{ route('shop.list') }}>一覧に戻る</a>
