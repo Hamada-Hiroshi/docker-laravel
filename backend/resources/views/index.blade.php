@@ -7,6 +7,7 @@
       <th>カテゴリ</th>
       <th>店名</th>
       <th>住所</th>
+      <th>投稿者</th>
     </tr>
     @foreach($shops as $shop)
       <tr>
@@ -17,6 +18,7 @@
           </a>
         </td>
         <td>{{ $shop->address }}</td>
+        <td>{{ $shop->user->name }}</td>
       </tr>
     @endforeach
   </table>
