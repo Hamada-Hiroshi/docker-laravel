@@ -7,6 +7,7 @@
       <th>カテゴリ</th>
       <th>店名</th>
       <th>住所</th>
+      <th>投稿者</th>
     </tr>
     @foreach($shops as $shop)
       <tr>
@@ -17,11 +18,14 @@
           </a>
         </td>
         <td>{{ $shop->address }}</td>
+        <td>{{ $shop->user->name }}</td>
       </tr>
     @endforeach
   </table>
 
-  <div>
-    <a href={{ route('shop.new') }} class='btn btn-outline-primary'>新しいお店</a>
-  </div>
+  @auth
+    <div>
+      <a href={{ route('shop.new') }} class='btn btn-outline-primary'>新しいお店</a>
+    </div>
+  @endauth
 @endsection
